@@ -9,44 +9,43 @@
       background: linear-gradient(135deg, #ffd6e0, #fff0f5);
       font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
-      padding: 30px;
-      overflow-x: hidden;
+      padding: 20px;
       color: #444;
+      margin: 0;
+      overflow-x: hidden;
+      position: relative;
     }
     h1 {
       font-size: 3rem;
       color: #ff4d6d;
       text-shadow: 2px 2px #fff;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .note {
       font-size: 1.2rem;
       background: #fff;
       padding: 20px;
       border-radius: 20px;
-      display: inline-block;
+      display: block;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       margin: 20px auto;
       max-width: 600px;
       line-height: 1.6;
-      animation: typing 5s steps(50, end), blink-caret .75s step-end infinite;
       border-right: 3px solid #ff4d6d;
-      white-space: nowrap;
-      overflow: hidden;
+      white-space: normal;
+      overflow: visible;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
     }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: #ff4d6d; }
-    }
-    .section { margin-top: 30px; }
+    @keyframes fadeIn { to { opacity: 1; } }
+    .section { margin-top: 30px; padding: 10px; }
     iframe {
       border-radius: 15px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
       animation: pulse 2s infinite;
+      width: 90%;
+      max-width: 300px;
+      height: 180px;
     }
     @keyframes pulse {
       0% { transform: scale(1); }
@@ -78,31 +77,42 @@
       display: none;
       z-index: 1000;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    p { text-align: left; }
+    @media(max-width: 600px){
+      h1 { font-size: 2.2rem; }
+      .note { font-size: 1rem; padding: 15px; }
+      iframe { height: 160px; }
     }
   </style>
 </head>
 <body>
   <h1>💖 Happy National BF Day, Jatyran 💖</h1>
-  <div class="note">This year apart has been hard, but being with you makes everything worth it. Living together is my favorite adventure 💕</div>
-  
+
+  <div class="note">
+    Even though we were separated for almost a year, I never stopped loving you and that only intensified it even more. You're all I think about, the only person in the WORLD that could ever be for me and I'd like to say I am the only person in the world who could ever be for you. We fit each other so perfectly and balance each other out. I could not ask for anything different. These past three weeks with you have been nothing but greatness, even in the times you're gone, and it only makes me feel stronger about our connection and how grateful I am to have met the person for me at 23 years old. I am so excited to spend the rest of my life with you.
+    <br><br>
+    Even though I don't have the money to create something significant or buy you something insane, I wanted to make this day super special for you. I created some coupons for you on your desk, feel free to use them (ANYDAY BUT TODAY PLZ), and there's also a cute homemade puzzle for you to do when you get back. ALL CREATED BY ME BTW. I want you to know and feel just how special you are to me.
+  </div>
+
   <div class="section">
     <h2>🌸 Do You Remember?</h2>
     <p>Do you remember when we took our first edible together at the cottages? It was really fun, we were both trippin out but that's how I knew that I loved you because I could not get high or find anyone to make me feel as safe and comfortable, even under the influence, as you do.</p>
     <p>Do you remember the first time you came to my house or the cottages? You told me you'd be back and you did indeed come back. We were hardcore flirting with each other. It was so cute and I'll never forget that moment.</p>
     <p>Do you remember before we met, we used to binge watch stuff together on that one extension on my computer? We used to watch Naruto, all types of animes, Netflix shows, play Fortnite. We had a lot of fun together before we even met. We were best friends before we got together and that's so perfect and important.</p>
-    <p>Even though we were separated for almost a year, I never stopped loving you and that only intensified it even more. You're all I think about, the only person in the WORLD that could ever be for me and I'd like to say I am the only person in the world who could ever be for you. We fit each other so perfectly and balance each other out. I could not ask for anything different. These past three weeks living with you have been nothing but greatness, even in the times you're gone, and it only makes me feel more and more stronger about our connection and how grateful I am to have met the person for me at 23 years old. I am so excited to spend the rest of my life with you.</p>
-    <p>Even though I don't have the money to create something significant or buy you something insane, I wanted to make this day super special for you. I created some coupons for you on your desk, feel free to use them (ANYDAY BUT TODAY PLZ), and there's also a cute homemade puzzle for you to do when you get back. ALL CREATED BY ME BTW. I want you to know and feel just how special you are to me.</p>
   </div>
-  
+
   <div class="section">
     <h2>🎶 Our Song</h2>
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/Q1sECaNhc70?autoplay=1&mute=1" allow="autoplay" allowfullscreen></iframe>
+    <!-- Updated YouTube link that works: Nxwhere by Jenevieve -->
+    <iframe src="https://www.youtube.com/embed/gmLPNv9k4xU?autoplay=1&mute=1" allow="autoplay" allowfullscreen></iframe>
   </div>
 
-  <div class="popup" id="popup">💘 I love you so much, Jatyran 💘</div>
+  <div class="popup" id="popup">💘 I love you so much, Jatyran 💘<br><small>(Click to close)</small></div>
 
   <script>
-    // Floating hearts & sparkles
+    // Floating hearts & sparkles upward
     function createFloating() {
       const el = document.createElement('div');
       el.className = 'floating';
@@ -114,10 +124,41 @@
     }
     setInterval(createFloating, 800);
 
-    // Popup message after 5 seconds
+    // Tiny hearts falling down
+    function createTinyHearts() {
+      const el = document.createElement('div');
+      el.className = 'floating';
+      el.style.fontSize = '0.8rem';
+      el.innerText = '💌';
+      el.style.left = Math.random() * 100 + 'vw';
+      el.style.top = '-20px';
+      el.style.animationDuration = (6 + Math.random() * 4) + 's';
+      el.style.animationName = 'fallDown';
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 10000);
+    }
+    setInterval(createTinyHearts, 500);
+
+    // Falling animation
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes fallDown {
+        0% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(100vh); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Popup after 5 seconds
+    const popup = document.getElementById('popup');
     setTimeout(() => {
-      document.getElementById('popup').style.display = 'block';
+      popup.style.display = 'block';
     }, 5000);
+
+    // Close popup on click
+    popup.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
   </script>
 </body>
 </html>
