@@ -6,7 +6,7 @@
   <title>Happy National BF Day 💕</title>
   <style>
     body {
-      background: linear-gradient(135deg, #ffd6e0, #fff0f5);
+      background: linear-gradient(135deg, #ffe6f0, #fff0f5);
       font-family: 'Comic Sans MS', cursive, sans-serif;
       margin: 0;
       padding: 20px;
@@ -32,57 +32,59 @@
       max-width: 600px;
       line-height: 1.5;
       border-right: 3px solid #ff4d6d;
-      white-space: normal;
-      overflow: visible;
-      opacity: 0;
-      animation: fadeIn 3s forwards;
     }
-    @keyframes fadeIn { to { opacity: 1; } }
-
     .section { margin-top: 30px; padding: 10px; }
 
-    /* Carousel styles */
-    .carousel {
-      position: relative;
-      max-width: 600px;
-      margin: 0 auto;
-      overflow: hidden;
+    /* Mood section */
+    .mood-buttons {
+      margin-top: 15px;
     }
-    .carousel-track {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-    }
-    .memory-card {
-      min-width: 100%;
-      box-sizing: border-box;
-      background: #fff0f5;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-      font-size: 0.95rem;
-      line-height: 1.4;
-      cursor: grab;
-    }
-    .carousel-buttons {
-      margin-top: 10px;
-    }
-    .carousel-buttons button {
-      background: #ff4d6d;
-      border: none;
+    .mood-buttons button {
+      background: linear-gradient(135deg, #ffb6c1, #ff4d6d);
       color: #fff;
-      padding: 8px 12px;
-      margin: 0 5px;
-      border-radius: 10px;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 15px;
+      margin: 7px;
       cursor: pointer;
       font-size: 1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.2s ease-in-out;
     }
-    iframe {
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      width: 90%;
-      max-width: 300px;
-      height: 166px;
+    .mood-buttons button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
     }
+    .mood-card {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #fff0f5;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      display: none;
+      animation: fadeIn 1s forwards;
+      text-align: left;
+    }
+
+    /* Final message */
+    .final-message {
+      max-width: 650px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      font-size: 1rem;
+      line-height: 1.6;
+      border-left: 4px solid #ff4d6d;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    /* Floating hearts */
     .floating {
       position: absolute;
       animation: floatUp 8s linear infinite;
@@ -95,10 +97,13 @@
       20% { opacity: 1; }
       100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
     }
+
+    @keyframes fadeIn { from {opacity: 0;} to {opacity:1;} }
+
     @media(max-width: 600px){
       h1 { font-size: 2rem; }
-      .note { font-size: 0.9rem; padding: 10px; }
-      .memory-card { padding: 15px; }
+      .note, .final-message, .mood-card { font-size: 0.9rem; padding: 12px; }
+      .mood-buttons button { padding: 10px 15px; font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -107,42 +112,50 @@
   <h1>💖 Happy National BF Day, Jatyran 💖</h1>
 
   <div class="note">
-    Even though we were separated for almost a year, I never stopped loving you and that only intensified it even more. You're all I think about, the only person in the WORLD that could ever be for me and I'd like to say I am the only person in the world who could ever be for you. We fit each other so perfectly and balance each other out. I could not ask for anything different. These past three weeks with you have been nothing but greatness, even in the times you're gone, and it only makes me feel stronger about our connection and how grateful I am to have met the person for me at 23 years old. I am so excited to spend the rest of my life with you.
+    Even though we were separated for almost a year, I never stopped loving you and that only intensified it even more. You're all I think about, the only person in the WORLD that could ever be for me and I'd like to say I am the only person in the world who could ever be for you. We fit each other so perfectly and balance each other out. I could not ask for anything different. These past three weeks with you have been nothing but greatness, even in the times you're gone, and it only makes me feel stronger about our connection and how grateful I am to have met the person for me at 18 years old. I am so excited to spend the rest of my life with you.
     <br><br>
     Even though I don't have the money to create something significant or buy you something insane, I wanted to make this day super special for you. I created some coupons for you on your desk, feel free to use them (ANYDAY BUT TODAY PLZ), and there's also a cute homemade puzzle for you to do when you get back. ALL CREATED BY ME BTW. I want you to know and feel just how special you are to me.
   </div>
 
   <div class="section">
-    <h2>🌸 Do You Remember?</h2>
-    <div class="carousel">
-      <div class="carousel-track">
-        <div class="memory-card">
-          <p>Do you remember when we took our first edible together at the cottages? It was really fun, we were both trippin out but that's how I knew that I loved you because I could not get high or find anyone to make me feel as safe and comfortable, even under the influence, as you do.</p>
-        </div>
-        <div class="memory-card">
-          <p>Do you remember the first time you came to my house or the cottages? You told me you'd be back and you did indeed come back. We were hardcore flirting with each other. It was so cute and I'll never forget that moment.</p>
-        </div>
-        <div class="memory-card">
-          <p>Do you remember before we met, we used to binge watch stuff together on that one extension on my computer? We used to watch Naruto, all types of animes, Netflix shows, play Fortnite. We had a lot of fun together before we even met. We were best friends before we got together and that's so perfect and important.</p>
-        </div>
-      </div>
+    <h2>💌 This website will remain up for as long as we're together 💌</h2>
+    <p>Bookmark this website and come back when you're feeling…</p>
+    <div class="mood-buttons">
+      <button onclick="showMood('down')">🌧️ Down / Sad</button>
+      <button onclick="showMood('angry')">🔥 Angry (even at me)</button>
+      <button onclick="showMood('demotivated')">💪 Demotivated</button>
+      <button onclick="showMood('tired')">💤 Tired</button>
     </div>
-    <div class="carousel-buttons">
-      <button id="prev">❮</button>
-      <button id="next">❯</button>
+
+    <div id="down" class="mood-card">
+      hi i know you're feeling down and i just want you to know it's okay to feel that way. but never let yourself feel down forever. you are destined to shine and succeed. you radiate positive, growing energy that never fails to keep people alive. keep yourself alive too. you are just as important.
+    </div>
+
+    <div id="angry" class="mood-card">
+      hi! i know you're upset right now, it may or may not be at me. i want you to take a moment. breathe. think about what is causing you to be angry. and what is the easiest way to solve it. because you will not solve anything being angry. angry is a state of mind, it is a secondary emotion. you are giving power away when you are angry. so do not be angry. be loving, forgiving and hopeful. do not let anyone tilt your success or swap your destiny. you are meant to shine and radiate like the star you are and do not let anyone, INCLUDING ME, have you down. i just want to preface my intentions will never be to keep you down or make you angry ever, i just want us to succeed together and i love to watch you grow into the amazing man you are.
+    </div>
+
+    <div id="demotivated" class="mood-card">
+      KEEP GOING! keep pushing through. the times will get tough. it was NEVER supposed to be easy for you. it was never supposed to be granted. it was supposed to be tough. hard work. YEARS. you've been at it for years. working hard for years. do not let this demotivation become who you are. no matter how hard it gets, keep going. you can take a break, but never ever quit your dreams.
+    </div>
+
+    <div id="tired" class="mood-card">
+      i'm so proud of you. you've been working so hard and i completely understand why you're tired. just know, it is okay to take a break. it is NOT okay to quit, but sometimes you need a break for your mental sanity. sometimes you need a break to lock back in and realize what your purpose is and what you are here to do. for the sake of yourself, for the sake of your kids, and for the sake of your grandkids, become your best self. your best self is not somebody who works endlessly tirelessly. your best self is someone who can be themselves, pursue success and dreams all while maintaining a healthy balance. get your rest you need it and you deserve it, but don't ever LET up.
     </div>
   </div>
 
-  <div class="section">
-    <h2>🎶 Our Song</h2>
-    <!-- SoundCloud embed autoplaying -->
-    <iframe width="100%" height="166" scrolling="no" frameborder="no"
-      allow="autoplay"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1530210228&color=%23ff4d6d&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-    </iframe>
+  <div class="final-message">
+    i'm going to be the best girlfriend and wife to you. i know i have had my own actions and things before that undoubtedly led to a clouded belief. i want to reassure you that i am here for you till the end of time. i am so locked in with you. i'm ready to grow with you, start a family, grow old, watch our kids grow, watch our kids kids grow, literally all of it. i want to explore the world with you. I want to go out of country. i'm ready to travel. i'm ready to perform. i'm ready to do it all with you. it's so much better knowing i have you by my side. and you can always count on me to be BY your side. forever. and that is a promise that I will hold till the death of me. i love you forever jatyran kaisai williams and you ARE my everything.
   </div>
 
   <script>
+    // Show selected mood card
+    function showMood(id) {
+      document.querySelectorAll('.mood-card').forEach(card => card.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      window.scrollTo({top: document.getElementById(id).offsetTop - 20, behavior:'smooth'});
+    }
+
     // Floating hearts upward
     function createFloating() {
       const el = document.createElement('div');
@@ -154,48 +167,7 @@
       setTimeout(() => el.remove(), 10000);
     }
     setInterval(createFloating, 800);
-
-    // Tiny hearts falling down
-    function createTinyHearts() {
-      const el = document.createElement('div');
-      el.className = 'floating';
-      el.style.fontSize = '0.8rem';
-      el.innerText = '💌';
-      el.style.left = Math.random() * 100 + 'vw';
-      el.style.top = '-20px';
-      el.style.animationDuration = (6 + Math.random() * 4) + 's';
-      el.style.animationName = 'fallDown';
-      document.body.appendChild(el);
-      setTimeout(() => el.remove(), 10000);
-    }
-    setInterval(createTinyHearts, 500);
-
-    // Falling animation
-    const style = document.createElement('style');
-    style.innerHTML = `
-      @keyframes fallDown {
-        0% { transform: translateY(0); opacity: 1; }
-        100% { transform: translateY(100vh); opacity: 0; }
-      }
-    `;
-    document.head.appendChild(style);
-
-    // Carousel functionality
-    const track = document.querySelector('.carousel-track');
-    const cards = Array.from(track.children);
-    let currentIndex = 0;
-
-    document.getElementById('next').addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % cards.length;
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    });
-    document.getElementById('prev').addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    });
-
   </script>
 
 </body>
 </html>
-
