@@ -8,29 +8,29 @@
     body {
       background: linear-gradient(135deg, #ffd6e0, #fff0f5);
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      text-align: center;
-      padding: 20px;
-      color: #444;
       margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: #444;
       overflow-x: hidden;
       position: relative;
     }
     h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: #ff4d6d;
       text-shadow: 2px 2px #fff;
       margin-bottom: 20px;
     }
     .note {
-      font-size: 1.2rem;
+      font-size: 1rem;
       background: #fff;
-      padding: 20px;
+      padding: 15px;
       border-radius: 20px;
       display: block;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      margin: 20px auto;
+      margin: 15px auto;
       max-width: 600px;
-      line-height: 1.6;
+      line-height: 1.5;
       border-right: 3px solid #ff4d6d;
       white-space: normal;
       overflow: visible;
@@ -38,25 +38,56 @@
       animation: fadeIn 3s forwards;
     }
     @keyframes fadeIn { to { opacity: 1; } }
+
     .section { margin-top: 30px; padding: 10px; }
+
+    /* Carousel styles */
+    .carousel {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+    }
+    .memory-card {
+      min-width: 100%;
+      box-sizing: border-box;
+      background: #fff0f5;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      cursor: grab;
+    }
+    .carousel-buttons {
+      margin-top: 10px;
+    }
+    .carousel-buttons button {
+      background: #ff4d6d;
+      border: none;
+      color: #fff;
+      padding: 8px 12px;
+      margin: 0 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
     iframe {
       border-radius: 15px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      animation: pulse 2s infinite;
       width: 90%;
       max-width: 300px;
-      height: 180px;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+      height: 166px;
     }
     .floating {
       position: absolute;
       animation: floatUp 8s linear infinite;
       color: #ff4d6d;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       opacity: 0.7;
     }
     @keyframes floatUp {
@@ -64,30 +95,15 @@
       20% { opacity: 1; }
       100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
     }
-    .popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #fff0f5;
-      border: 2px solid #ff4d6d;
-      border-radius: 20px;
-      padding: 30px;
-      font-size: 1.5rem;
-      display: none;
-      z-index: 1000;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      cursor: pointer;
-    }
-    p { text-align: left; }
     @media(max-width: 600px){
-      h1 { font-size: 2.2rem; }
-      .note { font-size: 1rem; padding: 15px; }
-      iframe { height: 160px; }
+      h1 { font-size: 2rem; }
+      .note { font-size: 0.9rem; padding: 10px; }
+      .memory-card { padding: 15px; }
     }
   </style>
 </head>
 <body>
+
   <h1>💖 Happy National BF Day, Jatyran 💖</h1>
 
   <div class="note">
@@ -98,21 +114,36 @@
 
   <div class="section">
     <h2>🌸 Do You Remember?</h2>
-    <p>Do you remember when we took our first edible together at the cottages? It was really fun, we were both trippin out but that's how I knew that I loved you because I could not get high or find anyone to make me feel as safe and comfortable, even under the influence, as you do.</p>
-    <p>Do you remember the first time you came to my house or the cottages? You told me you'd be back and you did indeed come back. We were hardcore flirting with each other. It was so cute and I'll never forget that moment.</p>
-    <p>Do you remember before we met, we used to binge watch stuff together on that one extension on my computer? We used to watch Naruto, all types of animes, Netflix shows, play Fortnite. We had a lot of fun together before we even met. We were best friends before we got together and that's so perfect and important.</p>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="memory-card">
+          <p>Do you remember when we took our first edible together at the cottages? It was really fun, we were both trippin out but that's how I knew that I loved you because I could not get high or find anyone to make me feel as safe and comfortable, even under the influence, as you do.</p>
+        </div>
+        <div class="memory-card">
+          <p>Do you remember the first time you came to my house or the cottages? You told me you'd be back and you did indeed come back. We were hardcore flirting with each other. It was so cute and I'll never forget that moment.</p>
+        </div>
+        <div class="memory-card">
+          <p>Do you remember before we met, we used to binge watch stuff together on that one extension on my computer? We used to watch Naruto, all types of animes, Netflix shows, play Fortnite. We had a lot of fun together before we even met. We were best friends before we got together and that's so perfect and important.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
   </div>
 
   <div class="section">
     <h2>🎶 Our Song</h2>
-    <!-- Updated YouTube link that works: Nxwhere by Jenevieve -->
-    <iframe src="https://www.youtube.com/embed/gmLPNv9k4xU?autoplay=1&mute=1" allow="autoplay" allowfullscreen></iframe>
+    <!-- SoundCloud embed autoplaying -->
+    <iframe width="100%" height="166" scrolling="no" frameborder="no"
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1530210228&color=%23ff4d6d&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+    </iframe>
   </div>
 
-  <div class="popup" id="popup">💘 I love you so much, Jatyran 💘<br><small>(Click to close)</small></div>
-
   <script>
-    // Floating hearts & sparkles upward
+    // Floating hearts upward
     function createFloating() {
       const el = document.createElement('div');
       el.className = 'floating';
@@ -149,16 +180,22 @@
     `;
     document.head.appendChild(style);
 
-    // Popup after 5 seconds
-    const popup = document.getElementById('popup');
-    setTimeout(() => {
-      popup.style.display = 'block';
-    }, 5000);
+    // Carousel functionality
+    const track = document.querySelector('.carousel-track');
+    const cards = Array.from(track.children);
+    let currentIndex = 0;
 
-    // Close popup on click
-    popup.addEventListener('click', () => {
-      popup.style.display = 'none';
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
     });
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+
   </script>
+
 </body>
 </html>
+
