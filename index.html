@@ -3,97 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy National BF Day ❤️</title>
+  <title>Happy National BF Day 💕</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
-      margin: 0;
-      padding: 0;
+      background: linear-gradient(135deg, #ffd6e0, #fff0f5);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
-      color: #333;
-    }
-    header {
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #ff4d6d;
-    }
-    h2 {
-      font-size: 1.5rem;
+      padding: 30px;
+      overflow-x: hidden;
       color: #444;
     }
-    .hearts {
-      font-size: 2rem;
-      animation: float 3s ease-in-out infinite;
+    h1 {
+      font-size: 3rem;
+      color: #ff4d6d;
+      text-shadow: 2px 2px #fff;
+      margin-bottom: 10px;
     }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .section {
+    .note {
+      font-size: 1.2rem;
       background: #fff;
-      margin: 1.5rem auto;
-      padding: 1.5rem;
+      padding: 20px;
       border-radius: 20px;
+      display: inline-block;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin: 20px auto;
       max-width: 600px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      line-height: 1.6;
+      animation: typing 5s steps(50, end), blink-caret .75s step-end infinite;
+      border-right: 3px solid #ff4d6d;
+      white-space: nowrap;
+      overflow: hidden;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
     }
-    ul li::before {
-      content: "❤️ ";
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #ff4d6d; }
     }
-    .gallery img {
-      width: 100%;
-      max-width: 250px;
-      margin: 10px;
+    .section { margin-top: 30px; }
+    iframe {
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      animation: pulse 2s infinite;
     }
-    footer {
-      margin: 2rem;
-      font-size: 1rem;
-      color: #666;
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .floating {
+      position: absolute;
+      animation: floatUp 8s linear infinite;
+      color: #ff4d6d;
+      font-size: 1.5rem;
+      opacity: 0.7;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+      20% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff0f5;
+      border: 2px solid #ff4d6d;
+      border-radius: 20px;
+      padding: 30px;
+      font-size: 1.5rem;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Happy National BF Day ❤️</h1>
-    <p class="hearts">💖 💕 💞 💘</p>
-    <h2>To the best boyfriend ever: [His Name]</h2>
-  </header>
+  <h1>💖 Happy National BF Day, Jatyran 💖</h1>
+  <div class="note">This year apart has been hard, but being with you makes everything worth it. Living together is my favorite adventure 💕</div>
+  
+  <div class="section">
+    <h2>🌸 Do You Remember?</h2>
+    <p>Do you remember when we took our first edible together at the cottages? It was really fun, we were both trippin out but that's how I knew that I loved you because I could not get high or find anyone to make me feel as safe and comfortable, even under the influence, as you do.</p>
+    <p>Do you remember the first time you came to my house or the cottages? You told me you'd be back and you did indeed come back. We were hardcore flirting with each other. It was so cute and I'll never forget that moment.</p>
+    <p>Do you remember before we met, we used to binge watch stuff together on that one extension on my computer? We used to watch Naruto, all types of animes, Netflix shows, play Fortnite. We had a lot of fun together before we even met. We were best friends before we got together and that's so perfect and important.</p>
+    <p>Even though we were separated for almost a year, I never stopped loving you and that only intensified it even more. You're all I think about, the only person in the WORLD that could ever be for me and I'd like to say I am the only person in the world who could ever be for you. We fit each other so perfectly and balance each other out. I could not ask for anything different. These past three weeks living with you have been nothing but greatness, even in the times you're gone, and it only makes me feel more and more stronger about our connection and how grateful I am to have met the person for me at 23 years old. I am so excited to spend the rest of my life with you.</p>
+    <p>Even though I don't have the money to create something significant or buy you something insane, I wanted to make this day super special for you. I created some coupons for you on your desk, feel free to use them (ANYDAY BUT TODAY PLZ), and there's also a cute homemade puzzle for you to do when you get back. ALL CREATED BY ME BTW. I want you to know and feel just how special you are to me.</p>
+  </div>
+  
+  <div class="section">
+    <h2>🎶 Our Song</h2>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/Q1sECaNhc70?autoplay=1&mute=1" allow="autoplay" allowfullscreen></iframe>
+  </div>
 
-  <section class="section">
-    <h2>Reasons I Love You</h2>
-    <ul>
-      <li>You make me laugh every single day.</li>
-      <li>You're my safe place and my adventure at the same time.</li>
-      <li>I love how kind you are to everyone.</li>
-      <li>You always support me no matter what.</li>
-      <li>Life is better with you in it. 💕</li>
-    </ul>
-  </section>
+  <div class="popup" id="popup">💘 I love you so much, Jatyran 💘</div>
 
-  <section class="section gallery">
-    <h2>Our Favorite Memories</h2>
-    <img src="https://via.placeholder.com/250" alt="Photo 1">
-    <img src="https://via.placeholder.com/250" alt="Photo 2">
-    <img src="https://via.placeholder.com/250" alt="Photo 3">
-  </section>
+  <script>
+    // Floating hearts & sparkles
+    function createFloating() {
+      const el = document.createElement('div');
+      el.className = 'floating';
+      el.innerText = Math.random() > 0.5 ? '💖' : '✨';
+      el.style.left = Math.random() * 100 + 'vw';
+      el.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 10000);
+    }
+    setInterval(createFloating, 800);
 
-  <section class="section">
-    <h2>Special Song for You 🎶</h2>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5hc71nKsUgtwQ3z52KEKQk?utm_source=generator" width="100%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-  </section>
-
-  <footer>
-    <p>Made with ❤️ just for you.</p>
-  </footer>
+    // Popup message after 5 seconds
+    setTimeout(() => {
+      document.getElementById('popup').style.display = 'block';
+    }, 5000);
+  </script>
 </body>
 </html>
